@@ -6,17 +6,45 @@
   <title>Chandra Rup Daka - Academic CV</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     @media print {
       body { margin: 0; padding: 0; }
       .no-print { display: none; }
     }
-    .cv-section { margin-bottom: 1.5rem; }
+    .cv-section { margin-bottom: 1.5rem; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .cv-section.animate { opacity: 1; transform: translateY(0); }
     .cv-header { border-bottom: 2px solid #1f2937; padding-bottom: 0.5rem; margin-bottom: 1rem; }
     .cv-item { margin-bottom: 1rem; }
+    .cv-item:hover { background-color: #f9fafb; padding: 0.5rem; border-radius: 0.5rem; transition: background-color 0.3s; }
+    .nav-link { transition: color 0.3s; }
+    .nav-link:hover { color: #3b82f6; }
+    #back-to-top { transition: opacity 0.3s; }
   </style>
 </head>
 <body>
-  <div class="max-w-4xl mx-auto p-8 bg-white">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-10 no-print">
+    <div class="max-w-4xl mx-auto px-8 py-4">
+      <ul class="flex space-x-6 text-sm font-medium">
+        <li><a href="#research-interests" class="nav-link">Research Interests</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#research-experience" class="nav-link">Research Experience</a></li>
+        <li><a href="#professional-experience" class="nav-link">Professional Experience</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#technical-projects" class="nav-link">Technical Projects</a></li>
+        <li><a href="#teaching-experience" class="nav-link">Teaching & Mentoring</a></li>
+        <li><a href="#technical-skills" class="nav-link">Technical Skills</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#leadership-activities" class="nav-link">Leadership & Activities</a></li>
+        <li><a href="#honors-awards" class="nav-link">Honors & Awards</a></li>
+        <li><a href="#research-statement" class="nav-link">Research Statement</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="max-w-4xl mx-auto p-8 bg-white" style="padding-top: 120px;">
     <!-- Header -->
     <div class="text-center mb-8">
       <h1 class="text-4xl font-bold text-gray-900 mb-2">CHANDRA RUP DAKA</h1>
@@ -27,17 +55,17 @@
           <span>📱 +1 (253) 632-3181</span>
         </div>
         <div class="flex justify-center gap-4">
-          <a href="https://linkedin.com/in/chandra-rup-daka" target="_blank">🔗 linkedin.com/in/chandra-rup-daka</a>
+          <a href="https://linkedin.com/in/chandra-rup-daka" target="_blank" class="hover:text-blue-600">🔗 linkedin.com/in/chandra-rup-daka</a>
           <span>📍 Houston, Texas</span>
         </div>
       </div>
       <div class="mt-4">
-        <a href="https://drive.google.com/uc?export=download&id=16AZ9iQXKH27M4sswtuOwnh1gUtaChrq-" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" target="_blank">Download Resume PDF</a>
+        <a href="https://drive.google.com/uc?export=download&id=16AZ9iQXKH27M4sswtuOwnh1gUtaChrq-" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition" target="_blank">Download Resume</a>
       </div>
     </div>
 
     <!-- Research Interests -->
-    <div class="cv-section">
+    <div class="cv-section" id="research-interests">
       <h2 class="text-xl font-bold text-gray-900 cv-header">RESEARCH INTERESTS</h2>
       <p class="text-gray-800 leading-relaxed">
         Natural Language Processing, Large Language Models (LLMs), Agentic AI Systems, Retrieval-Augmented Generation (RAG), 
@@ -46,7 +74,7 @@
     </div>
 
     <!-- Education -->
-    <div class="cv-section">
+    <div class="cv-section" id="education">
       <h2 class="text-xl font-bold text-gray-900 cv-header">EDUCATION</h2>
       
       <div class="cv-item">
@@ -76,7 +104,7 @@
     </div>
 
     <!-- Research Experience -->
-    <div class="cv-section">
+    <div class="cv-section" id="research-experience">
       <h2 class="text-xl font-bold text-gray-900 cv-header">RESEARCH EXPERIENCE</h2>
       
       <div class="cv-item">
@@ -88,7 +116,7 @@
           <div class="text-gray-700">Jan 2023 – May 2023</div>
         </div>
         <ul class="list-disc ml-6 text-gray-800 space-y-1 text-sm">
-          <li>Developed deep learning framework for deepfake video detection using transfer learning with ResNet, XceptionNet, and VGG16 combined with LSTM/Bi-LSTM architectures, achieving 96% accuracy on 6,500-video dataset</li>
+          <li>Developed deep learning framework for deepfake video detection using transfer learning with ResNet, XceptionNet, and VGG16 combined with LSTM/Bi-LSTM architectures, achieving 96% accuracy on a curated dataset</li>
           <li>Published findings in Global Conference for Advancement in Technology (GCAT), October 2024</li>
           <li>Conducted comprehensive literature review on state-of-the-art deepfake detection methodologies and AI-generated media forensics</li>
         </ul>
@@ -111,7 +139,7 @@
     </div>
 
     <!-- Professional Experience -->
-    <div class="cv-section">
+    <div class="cv-section" id="professional-experience">
       <h2 class="text-xl font-bold text-gray-900 cv-header">PROFESSIONAL EXPERIENCE</h2>
       
       <div class="cv-item">
@@ -123,9 +151,9 @@
           <div class="text-gray-700">Aug 2023 – Aug 2025</div>
         </div>
         <ul class="list-disc ml-6 text-gray-800 space-y-1 text-sm">
-          <li>Architected and deployed production-grade LLM-based solutions for reverse engineering SDLC workflows including Change Impact Analysis, Code Translation, Dependency Graph Generation, and automated User Story/Test Case Generation</li>
+          <li>Architected and deployed production-grade LLM-based solutions for reverse engineering SDLC workflows including Change Impact Analysis, Code Translation, Dependency Graph Generation, and Documentation Automation</li>
           <li>Achieved 89% coverage in Technical Analysis phase with 9% efficiency improvement at 46% code coverage across 30,000+ file codebases</li>
-          <li>Designed custom RAG pipelines using LangChain and AutoGen frameworks with advanced techniques including BERTopic for topic modeling, sentence transformers for semantic search, and knowledge graphs with Neo4j for relationship mapping</li>
+          <li>Designed custom RAG pipelines using LangChain and AutoGen frameworks with advanced techniques including BERTopic for topic modeling, sentence transformers for semantic search, and knowledge graphs for enhanced retrieval</li>
           <li>Implemented multi-database architecture utilizing ChromaDB, PostgreSQL, and Pinecone vector stores for optimal retrieval performance</li>
           <li>Gained hands-on expertise with GPT-4, Claude, and Gemini APIs; customized authentication mechanisms using certificates, custom tokens, and APIM endpoints</li>
           <li>Mentored 30+ junior engineers on Python, agentic frameworks, and GenAI best practices through structured training sessions</li>
@@ -135,7 +163,7 @@
     </div>
 
     <!-- Publications -->
-    <div class="cv-section">
+    <div class="cv-section" id="publications">
       <h2 class="text-xl font-bold text-gray-900 cv-header">PUBLICATIONS</h2>
       
       <div class="cv-item">
@@ -162,7 +190,7 @@
     </div>
 
     <!-- Technical Projects -->
-    <div class="cv-section">
+    <div class="cv-section" id="technical-projects">
       <h2 class="text-xl font-bold text-gray-900 cv-header">SELECTED TECHNICAL PROJECTS</h2>
       
       <div class="cv-item">
@@ -205,7 +233,7 @@
     </div>
 
     <!-- Teaching Experience -->
-    <div class="cv-section">
+    <div class="cv-section" id="teaching-experience">
       <h2 class="text-xl font-bold text-gray-900 cv-header">TEACHING & MENTORING EXPERIENCE</h2>
       
       <div class="cv-item">
@@ -226,7 +254,7 @@
     </div>
 
     <!-- Technical Skills -->
-    <div class="cv-section">
+    <div class="cv-section" id="technical-skills">
       <h2 class="text-xl font-bold text-gray-900 cv-header">TECHNICAL SKILLS</h2>
       
       <div class="space-y-2 text-sm">
@@ -272,7 +300,7 @@
     </div>
 
     <!-- Certifications -->
-    <div class="cv-section">
+    <div class="cv-section" id="certifications">
       <h2 class="text-xl font-bold text-gray-900 cv-header">CERTIFICATIONS</h2>
       <div class="grid grid-cols-2 gap-2 text-sm text-gray-800">
         <div>• AWS Certified Cloud Practitioner (Valid: Jun 2024 – Jun 2027)</div>
@@ -282,26 +310,28 @@
     </div>
 
     <!-- Leadership & Activities -->
-    <h2 class="text-xl font-bold text-gray-900 cv-header">LEADERSHIP & EXTRACURRICULAR ACTIVITIES</h2>
-    <div class="space-y-2 text-sm text-gray-800">
-      <div>
-        <strong>Active Member, Art Club 'Kala' & Photography Club 'Smriti'</strong> | Amrita Vishwa Vidyapeetham
-        <ul class="list-disc ml-6 mt-1">
-          <li>Organized workshops and cultural events promoting creative expression and community engagement</li>
-          <li>Coordinated monthly photography competitions during COVID-19 to maintain community connection</li>
-        </ul>
-      </div>
-      
-      <div>
-        <strong>Volunteer, Prakruthi Nature Club</strong> | Amrita Vishwa Vidyapeetham
-        <ul class="list-disc ml-6 mt-1">
-          <li>Participated in campus cleanliness drives and promoted organic farming awareness initiatives</li>
-        </ul>
+    <div class="cv-section" id="leadership-activities">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">LEADERSHIP & EXTRACURRICULAR ACTIVITIES</h2>
+      <div class="space-y-2 text-sm text-gray-800">
+        <div>
+          <strong>Active Member, Art Club 'Kala' & Photography Club 'Smriti'</strong> | Amrita Vishwa Vidyapeetham
+          <ul class="list-disc ml-6 mt-1">
+            <li>Organized workshops and cultural events promoting creative expression and community engagement</li>
+            <li>Coordinated monthly photography competitions during COVID-19 to maintain community connection</li>
+          </ul>
+        </div>
+        
+        <div>
+          <strong>Volunteer, Prakruthi Nature Club</strong> | Amrita Vishwa Vidyapeetham
+          <ul class="list-disc ml-6 mt-1">
+            <li>Participated in campus cleanliness drives and promoted organic farming awareness initiatives</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <!-- Honors & Awards -->
-    <div class="cv-section">
+    <div class="cv-section" id="honors-awards">
       <h2 class="text-xl font-bold text-gray-900 cv-header">HONORS & AWARDS</h2>
       <ul class="list-disc ml-6 text-sm text-gray-800 space-y-1">
         <li><strong>Wall of Fame Award (Q4 FY24)</strong> - Accenture, for exceptional contribution to GenAI platform development</li>
@@ -311,7 +341,7 @@
     </div>
 
     <!-- Research Statement -->
-    <div class="cv-section">
+    <div class="cv-section" id="research-statement">
       <h2 class="text-xl font-bold text-gray-900 cv-header">RESEARCH STATEMENT</h2>
       <p class="text-sm text-gray-800 leading-relaxed">
         My research interests lie at the intersection of Large Language Models, Agentic AI systems, and practical applications 
@@ -329,5 +359,33 @@
       <p>References available upon request</p>
     </div>
   </div>
+
+  <!-- Back to Top Button -->
+  <div id="back-to-top" class="fixed bottom-10 right-10 bg-blue-500 text-white p-3 rounded-full hidden cursor-pointer no-print" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</div>
+
+  <script>
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.cv-section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Back to top button visibility
+    window.addEventListener('scroll', () => {
+      const backToTop = document.getElementById('back-to-top');
+      if (window.scrollY > 300) {
+        backToTop.classList.remove('hidden');
+      } else {
+        backToTop.classList.add('hidden');
+      }
+    });
+  </script>
 </body>
 </html>

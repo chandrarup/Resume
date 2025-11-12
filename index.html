@@ -21,6 +21,35 @@
     .nav-link { transition: color 0.3s; }
     .nav-link:hover { color: #3b82f6; }
     #back-to-top { transition: opacity 0.3s; }
+    
+    /* Responsive Design for Tablets and Mobile */
+    @media (max-width: 768px) {
+      /* Hide fixed navigation on tablets and mobile */
+      nav { display: none; }
+      /* Remove left padding on content container */
+      .w-full { padding-left: 2rem !important; padding-right: 2rem !important; }
+      /* Adjust header text sizes */
+      h1 { font-size: 2rem !important; }
+      h2 { font-size: 1.25rem !important; }
+      /* Make header sections more compact */
+      .cv-section { margin-bottom: 1rem; }
+    }
+    
+    @media (max-width: 480px) {
+      /* Further adjustments for mobile phones */
+      .w-full { padding-left: 1rem !important; padding-right: 1rem !important; padding-top: 1rem !important; }
+      /* Smaller header on mobile */
+      h1 { font-size: 1.75rem !important; }
+      h2 { font-size: 1.1rem !important; }
+      /* Stack contact info vertically */
+      .flex.justify-center { flex-direction: column !important; align-items: center !important; gap: 0.5rem !important; }
+      /* Adjust font sizes for better mobile readability */
+      body { font-size: 0.9rem; }
+      .text-sm { font-size: 0.8rem !important; }
+      /* More compact sections */
+      .cv-section { margin-bottom: 0.75rem; }
+      .cv-item { margin-bottom: 0.75rem; }
+    }
   </style>
 </head>
 <body>
@@ -51,7 +80,7 @@
       <div class="text-sm text-gray-700 space-y-1">
         <div>Graduate Student | MS in Data Science & Artificial Intelligence</div>
         <div class="flex justify-center gap-4 mt-2">
-          <span>📧 chandrarupdaka@gmail.com</span>
+          <span>📧 <a href="mailto:chandrarupdaka@gmail.com" class="hover:text-blue-600 cursor-pointer">chandrarupdaka@gmail.com</a></span>
           <span>📱 +1 (253) 632-3181</span>
         </div>
         <div class="flex justify-center gap-4">

@@ -3,73 +3,334 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chandra's Resume</title>
+  <title>Chandra Rup Daka - Academic CV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(120deg, #f0f4f8, #d9e4f1);
-      color: #333;
+    @media print {
+      body { margin: 0; padding: 0; }
+      .no-print { display: none; }
     }
-    header {
-      text-align: center;
-      padding: 20px;
-      background: #2c3e50;
-      color: white;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 1rem;
-      font-style: italic;
-    }
-    .resume-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: calc(100vh - 80px); /* Account for header height */
-      padding: 10px;
-    }
-    iframe {
-      width: 90%;
-      max-width: 900px;
-      height: 90%;
-      border: 2px solid #2c3e50;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .fallback {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .fallback a {
-      color: #2c3e50;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    .cv-section { margin-bottom: 1.5rem; }
+    .cv-header { border-bottom: 2px solid #1f2937; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+    .cv-item { margin-bottom: 1rem; }
   </style>
 </head>
 <body>
+  <div class="max-w-4xl mx-auto p-8 bg-white">
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-gray-900 mb-2">CHANDRA RUP DAKA</h1>
+      <div class="text-sm text-gray-700 space-y-1">
+        <div>Graduate Student | MS in Data Science & Artificial Intelligence</div>
+        <div class="flex justify-center gap-4 mt-2">
+          <span>📧 chandrarupdaka@gmail.com</span>
+          <span>📱 +1 (253) 632-3181</span>
+        </div>
+        <div class="flex justify-center gap-4">
+          <span>🔗 linkedin.com/in/chandra-rup-daka</span>
+          <span>📍 Houston, Texas</span>
+        </div>
+      </div>
+      <div class="mt-4">
+        <a href="https://drive.google.com/uc?export=download&id=16AZ9iQXKH27M4sswtuOwnh1gUtaChrq-" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" target="_blank">Download Resume PDF</a>
+      </div>
+    </div>
 
-<header>
-  <h1>Chandra's Resume</h1>
-  <p>A showcase of my professional growth and skills</p>
-</header>
+    <!-- Research Interests -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">RESEARCH INTERESTS</h2>
+      <p class="text-gray-800 leading-relaxed">
+        Natural Language Processing, Large Language Models (LLMs), Agentic AI Systems, Retrieval-Augmented Generation (RAG), 
+        Deep Learning, Computer Vision, Speech Processing, Low-Resource Language Technologies, AI for Social Impact
+      </p>
+    </div>
 
-<div class="resume-container">
-  <iframe 
-    src="https://drive.google.com/file/d/16AZ9iQXKH27M4sswtuOwnh1gUtaChrq-/preview" 
-    allowfullscreen>
-  </iframe>
-</div>
+    <!-- Education -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">EDUCATION</h2>
+      
+      <div class="cv-item">
+        <div class="flex justify-between items-start mb-1">
+          <div>
+            <div class="font-bold text-gray-900">Master of Science in Engineering Data Science and Artificial Intelligence</div>
+            <div class="text-gray-700">University of Houston, Houston, Texas</div>
+          </div>
+          <div class="text-gray-700 text-right">Aug 2025 – May 2027</div>
+        </div>
+      </div>
 
-<div class="fallback">
-  <p>Cannot see the resume? <a href="https://drive.google.com/uc?export=download&id=16AZ9iQXKH27M4sswtuOwnh1gUtaChrq-" target="_blank">Download it here</a>.</p>
-</div>
+      <div class="cv-item">
+        <div class="flex justify-between items-start mb-1">
+          <div>
+            <div class="font-bold text-gray-900">Bachelor of Technology in Computer Science and Engineering (Artificial Intelligence)</div>
+            <div class="text-gray-700">Amrita Vishwa Vidyapeetham, Coimbatore, India</div>
+          </div>
+          <div class="text-gray-700 text-right">Jun 2019 – May 2023</div>
+        </div>
+        <div class="text-sm text-gray-700 mt-2">
+          <strong>Relevant Coursework:</strong> Deep Learning for Signal & Image Processing, AI in Natural Language Processing, 
+          Reinforcement Learning, Deep Reinforcement Learning, Robotics Vision, Computer Vision, Speech Processing, 
+          Big Data Analytics, Machine Learning, Data Structures & Algorithms, Operating Systems, Database Management
+        </div>
+      </div>
+    </div>
 
+    <!-- Research Experience -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">RESEARCH EXPERIENCE</h2>
+      
+      <div class="cv-item">
+        <div class="flex justify-between items-start mb-2">
+          <div>
+            <div class="font-bold text-gray-900">Undergraduate Research Assistant</div>
+            <div class="text-gray-700 italic">Amrita Vishwa Vidyapeetham</div>
+          </div>
+          <div class="text-gray-700">Jan 2023 – May 2023</div>
+        </div>
+        <ul class="list-disc ml-6 text-gray-800 space-y-1 text-sm">
+          <li>Developed deep learning framework for deepfake video detection using transfer learning with ResNet, XceptionNet, and VGG16 combined with LSTM/Bi-LSTM architectures, achieving 96% accuracy on 6,500-video dataset</li>
+          <li>Published findings in Global Conference for Advancement in Technology (GCAT), October 2024</li>
+          <li>Conducted comprehensive literature review on state-of-the-art deepfake detection methodologies and AI-generated media forensics</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="flex justify-between items-start mb-2">
+          <div>
+            <div class="font-bold text-gray-900">Research Project: Indian Sign Language Generation for Tamil</div>
+            <div class="text-gray-700 italic">Amrita Vishwa Vidyapeetham</div>
+          </div>
+          <div class="text-gray-700">Aug 2022 – Mar 2023</div>
+        </div>
+        <ul class="list-disc ml-6 text-gray-800 space-y-1 text-sm">
+          <li>Designed real-time speech-to-sign language translation system integrating NLP and computer vision to address communication barriers for Tamil-speaking hearing-impaired community</li>
+          <li>Built web application with custom GIF repository for commonly used sentences; experimented with BiLSTM transformers before integrating Google Translate API for production reliability</li>
+          <li>Published in International Conference on Advanced Computing and Communication Systems (ICACCS), March 2023</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">PROFESSIONAL EXPERIENCE</h2>
+      
+      <div class="cv-item">
+        <div class="flex justify-between items-start mb-2">
+          <div>
+            <div class="font-bold text-gray-900">Advanced App Engineering Analyst - GenAI Specialist</div>
+            <div class="text-gray-700 italic">Accenture (GenWizard Platform), Chennai, India</div>
+          </div>
+          <div class="text-gray-700">Aug 2023 – Aug 2025</div>
+        </div>
+        <ul class="list-disc ml-6 text-gray-800 space-y-1 text-sm">
+          <li>Architected and deployed production-grade LLM-based solutions for reverse engineering SDLC workflows including Change Impact Analysis, Code Translation, Dependency Graph Generation, and automated User Story/Test Case Generation</li>
+          <li>Achieved 89% coverage in Technical Analysis phase with 9% efficiency improvement at 46% code coverage across 30,000+ file codebases</li>
+          <li>Designed custom RAG pipelines using LangChain and AutoGen frameworks with advanced techniques including BERTopic for topic modeling, sentence transformers for semantic search, and knowledge graphs with Neo4j for relationship mapping</li>
+          <li>Implemented multi-database architecture utilizing ChromaDB, PostgreSQL, and Pinecone vector stores for optimal retrieval performance</li>
+          <li>Gained hands-on expertise with GPT-4, Claude, and Gemini APIs; customized authentication mechanisms using certificates, custom tokens, and APIM endpoints</li>
+          <li>Mentored 30+ junior engineers on Python, agentic frameworks, and GenAI best practices through structured training sessions</li>
+          <li>Recognized with Wall of Fame Award (Q4 FY24) and Client Recognition Award for exceptional delivery and technical innovation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Publications -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">PUBLICATIONS</h2>
+      
+      <div class="cv-item">
+        <div class="text-gray-800">
+          <strong>Daka, C.R.</strong> et al. (2024). "Detection of Real and Manipulated Videos using Transfer Learning." 
+          <em> Global Conference for Advancement in Technology (GCAT)</em>, October 2024.
+        </div>
+        <div class="text-sm text-gray-700 ml-4 mt-1">
+          Proposed deep learning framework combining transfer learning architectures with temporal models for deepfake detection, 
+          contributing to digital media integrity and AI-assisted misinformation detection.
+        </div>
+      </div>
+
+      <div class="cv-item">
+        <div class="text-gray-800">
+          <strong>Daka, C.R.</strong> et al. (2023). "Indian Sign Language Generation from Live Audio/Text (Tamil)." 
+          <em> International Conference on Advanced Computing and Communication Systems (ICACCS)</em>, March 2023.
+        </div>
+        <div class="text-sm text-gray-700 ml-4 mt-1">
+          Developed real-time speech-to-sign translation pipeline integrating NLP and computer vision, enhancing accessibility 
+          for Tamil-speaking hearing-impaired users.
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Projects -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">SELECTED TECHNICAL PROJECTS</h2>
+      
+      <div class="cv-item">
+        <div class="font-bold text-gray-900">Speech Emotion Recognition System</div>
+        <div class="text-sm text-gray-700 italic mb-1">Amrita Vishwa Vidyapeetham | May 2022</div>
+        <ul class="list-disc ml-6 text-gray-800 space-y-1 text-sm">
+          <li>Designed CNN-based emotion recognition system achieving 81.11% accuracy on RAVDESS dataset (1,440 audio files)</li>
+          <li>Implemented acoustic feature extraction pipeline using librosa (MFCCs, chroma, mel-spectrograms, tonnetz)</li>
+          <li>Demonstrated system at college exhibition showcasing applications in customer service automation</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="font-bold text-gray-900">Telugu News Article Classification</div>
+        <div class="text-sm text-gray-700 italic mb-1">Amrita Vishwa Vidyapeetham | May 2022</div>
+        <ul class="list-disc ml-6 text-gray-800 space-y-1 text-sm">
+          <li>Addressed low-resource NLP challenges by developing custom Word2Vec embeddings for Telugu language corpus</li>
+          <li>Compared MLP, CNN, LSTM, RNN, and Bi-LSTM architectures; achieved 82% accuracy with Bi-LSTM model</li>
+          <li>Conducted comprehensive data preprocessing and feature engineering for regional language text</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="font-bold text-gray-900">Ball Tracking and 3D Visualization for Sports Analytics</div>
+        <div class="text-sm text-gray-700 italic mb-1">Amrita Vishwa Vidyapeetham | Dec 2021</div>
+        <ul class="list-disc ml-6 text-gray-800 space-y-1 text-sm">
+          <li>Implemented real-time object tracking system using OpenCV for ball trajectory analysis in sports videos</li>
+          <li>Developed 3D motion visualization using Matplotlib for enhanced analytical insights</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="font-bold text-gray-900">4-DOF Digit Writing Robotic Manipulator</div>
+        <div class="text-sm text-gray-700 italic mb-1">Amrita Vishwa Vidyapeetham | May 2021</div>
+        <ul class="list-disc ml-6 text-gray-800 space-y-1 text-sm">
+          <li>Engineered robotic manipulator with 4 degrees of freedom to autonomously write user-specified digits</li>
+          <li>Integrated Python-based control system with ROS (Robot Operating System) for precise motion planning</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Teaching Experience -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">TEACHING & MENTORING EXPERIENCE</h2>
+      
+      <div class="cv-item">
+        <div class="flex justify-between items-start mb-2">
+          <div>
+            <div class="font-bold text-gray-900">Technical Mentor & Trainer</div>
+            <div class="text-gray-700 italic">Accenture, Chennai, India</div>
+          </div>
+          <div class="text-gray-700">Jan 2024 – Aug 2025</div>
+        </div>
+        <ul class="list-disc ml-6 text-gray-800 space-y-1 text-sm">
+          <li>Conducted comprehensive training sessions on Python programming, agentic AI frameworks (LangChain, AutoGen, CrewAI), and GenAI best practices for 30+ junior engineers</li>
+          <li>Developed structured curriculum covering fundamentals to advanced topics in LLM application development</li>
+          <li>Provided hands-on mentorship for project implementations and troubleshooting</li>
+          <li>Presented technical demonstrations to leadership and clients, translating complex AI concepts for diverse audiences</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">TECHNICAL SKILLS</h2>
+      
+      <div class="space-y-2 text-sm">
+        <div>
+          <strong class="text-gray-900">AI/ML Specializations:</strong>
+          <span class="text-gray-800"> Large Language Models (GPT-4, Claude, Gemini), Agentic AI (LangChain, AutoGen, CrewAI), 
+          Natural Language Processing, Computer Vision, Speech Processing, Deep Learning, Reinforcement Learning, Transfer Learning, 
+          Prompt Engineering, RAG Systems</span>
+        </div>
+        
+        <div>
+          <strong class="text-gray-900">Deep Learning Frameworks:</strong>
+          <span class="text-gray-800"> TensorFlow, PyTorch, Keras, Hugging Face Transformers</span>
+        </div>
+        
+        <div>
+          <strong class="text-gray-900">Data Science & Analytics:</strong>
+          <span class="text-gray-800"> Statistical Analysis, Predictive Modeling, Feature Engineering, Data Wrangling, 
+          Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</span>
+        </div>
+        
+        <div>
+          <strong class="text-gray-900">Vector & Graph Databases:</strong>
+          <span class="text-gray-800"> ChromaDB, Pinecone, PostgreSQL (pgvector), Neo4j, MongoDB</span>
+        </div>
+        
+        <div>
+          <strong class="text-gray-900">Development Tools:</strong>
+          <span class="text-gray-800"> Git, Docker, FastAPI, Flask, REST APIs, Jupyter, VS Code</span>
+        </div>
+        
+        <div>
+          <strong class="text-gray-900">Programming Languages:</strong>
+          <span class="text-gray-800"> Python (Expert), SQL, Java, C++</span>
+        </div>
+        
+        <div>
+          <strong class="text-gray-900">Specialized Libraries:</strong>
+          <span class="text-gray-800"> OpenCV, librosa, spaCy, NLTK, Gensim, OpenAI API, 
+          Anthropic API, Google Generative AI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">CERTIFICATIONS</h2>
+      <div class="grid grid-cols-2 gap-2 text-sm text-gray-800">
+        <div>• AWS Certified Cloud Practitioner (Valid: Jun 2024 – Jun 2027)</div>
+        <div>• Azure AI Fundamentals (Mar 2025)</div>
+        <div>• Azure AI Engineer Associate (Valid: Apr 2025 – Apr 2026)</div>
+      </div>
+    </div>
+
+    <!-- Leadership & Activities -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">LEADERSHIP & EXTRACURRICULAR ACTIVITIES</h2>
+      
+      <div class="space-y-2 text-sm text-gray-800">
+        <div>
+          <strong>Active Member, Art Club 'Kala' & Photography Club 'Smriti'</strong> | Amrita Vishwa Vidyapeetham
+          <ul class="list-disc ml-6 mt-1">
+            <li>Organized workshops and cultural events promoting creative expression and community engagement</li>
+            <li>Coordinated monthly photography competitions during COVID-19 to maintain community connection</li>
+          </ul>
+        </div>
+        
+        <div>
+          <strong>Volunteer, Prakruthi Nature Club</strong> | Amrita Vishwa Vidyapeetham
+          <ul class="list-disc ml-6 mt-1">
+            <li>Participated in campus cleanliness drives and promoted organic farming awareness initiatives</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Honors & Awards -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">HONORS & AWARDS</h2>
+      <ul class="list-disc ml-6 text-sm text-gray-800 space-y-1">
+        <li><strong>Wall of Fame Award (Q4 FY24)</strong> - Accenture, for exceptional contribution to GenAI platform development</li>
+        <li><strong>Client Recognition Award</strong> - Accenture, for successful delivery of production-grade GenAI solutions meeting client requirements</li>
+        <li><strong>Best Team Award (FY24 Q4)</strong> - Accenture, for collaborative excellence in delivering complex AI projects</li>
+      </ul>
+    </div>
+
+    <!-- Research Statement -->
+    <div class="cv-section">
+      <h2 class="text-xl font-bold text-gray-900 cv-header">RESEARCH STATEMENT</h2>
+      <p class="text-sm text-gray-800 leading-relaxed">
+        My research interests lie at the intersection of Large Language Models, Agentic AI systems, and practical applications 
+        of NLP for real-world problem solving. Through my professional experience developing production-grade RAG systems and 
+        academic research on deepfake detection and accessibility technologies, I have developed a strong foundation in both 
+        theoretical understanding and practical implementation of AI systems. I am particularly interested in advancing research 
+        in retrieval-augmented generation, low-resource language processing, and developing AI systems that bridge technological 
+        gaps for underserved communities. I am eager to contribute to cutting-edge research while pursuing graduate studies and 
+        am open to both Research Assistantship and Teaching Assistantship opportunities.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-8 pt-4 border-t border-gray-300 text-center text-xs text-gray-600 no-print">
+      <p>References available upon request</p>
+    </div>
+  </div>
 </body>
 </html>
